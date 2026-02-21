@@ -319,8 +319,26 @@ main,
 }
 
 .card-icon {
-  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
   margin-bottom: var(--spacing-sm);
+  color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  transition: 0.2s;
+}
+
+.card-icon svg {
+  flex-shrink: 0;
+}
+
+.card:hover .card-icon {
+  color: var(--accent-light);
+  border-color: var(--accent);
+  background: rgba(13, 148, 136, 0.08);
 }
 
 .card h3 {
