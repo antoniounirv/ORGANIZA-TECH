@@ -30,10 +30,13 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Outfit', sans-serif;
-  background: var(--bg-dark);
-  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
   line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: var(--text-primary);
+  background: var(--bg-dark);
   overflow-x: hidden;
   min-height: 100vh;
 }
@@ -124,6 +127,7 @@ body {
 .nav-link {
   color: var(--text-muted);
   text-decoration: none;
+  font-size: 0.9rem;
   font-weight: 500;
   transition: 0.2s;
 }
@@ -150,23 +154,22 @@ body {
 }
 
 .section-title {
-  font-size: clamp(2.2rem,5vw,3.5rem);
-  font-weight: 700;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
   text-align: center;
   margin-bottom: var(--spacing-xs);
-  background: linear-gradient(135deg,var(--text-primary),var(--text-muted));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--text-primary);
 }
 
 .section-subtitle {
   text-align: center;
-  color: var(--accent-light);
-  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  font-weight: 500;
   margin-bottom: var(--spacing-lg);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
 }
 
 /* ===== Hero ===== */
@@ -181,24 +184,26 @@ body {
 }
 
 .hero-title {
-  font-size: clamp(2.2rem,5vw,3.5rem);
-  font-weight: 700;
-  line-height: 1.15;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
   max-width: 820px;
 }
 
 .hero-title .highlight {
   color: var(--accent-light);
-  animation: float-text 4s ease-in-out infinite;
 }
 
-@keyframes float-text {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
+.hero-tagline {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  max-width: 560px;
 }
 
 .hero-desc {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: var(--text-muted);
   max-width: 480px;
 }
@@ -206,8 +211,10 @@ body {
 /* ===== Botões ===== */
 .btn {
   display: inline-block;
-  padding: 1rem 2rem;
+  padding: 0.875rem 1.75rem;
+  font-size: 0.9375rem;
   font-weight: 600;
+  letter-spacing: 0.01em;
   border-radius: var(--radius);
   text-decoration: none;
   transition: 0.2s;
@@ -278,14 +285,37 @@ body {
 }
 
 .about-lead {
-  font-size: 1.25rem;
+  font-size: 1.0625rem;
   font-weight: 600;
   color: var(--text-primary);
 }
 
 .about-mission {
-  color: var(--accent-light);
+  font-size: 1rem;
+  color: var(--text-muted);
   margin-top: var(--spacing-sm);
+}
+
+.about-mission strong {
+  color: var(--accent-light);
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-primary);
+}
+
+.card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.about-mission strong {
+  color: var(--accent-light);
 }
 
 .skills-list {
@@ -301,7 +331,8 @@ body {
   background: rgba(13,148,136,0.08);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius);
-  font-size: 0.9rem;
+  font-size: 0.875rem;
+  font-weight: 500;
   transition: 0.3s ease;
 }
 
@@ -321,7 +352,7 @@ body {
   text-align: center;
   border-top: 1px solid var(--border-subtle);
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: 0.8125rem;
 }
 
 /* ===== Responsivo ===== */
