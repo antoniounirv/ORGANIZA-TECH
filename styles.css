@@ -138,8 +138,9 @@ main,
 .nav {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  gap: var(--spacing-md);
+  gap: var(--spacing-lg);
   max-width: 900px;
   margin: 0 auto;
 }
@@ -147,9 +148,10 @@ main,
 .nav-link {
   color: var(--text-muted);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 500;
   transition: color 0.2s;
+  white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -158,9 +160,10 @@ main,
 
 .nav-cta {
   color: var(--accent-light);
-  padding: var(--spacing-xs) var(--spacing-md);
+  padding: 0.5rem 1.25rem;
   border: 1px solid var(--accent);
   border-radius: var(--radius);
+  white-space: nowrap;
 }
 
 .nav-cta:hover {
@@ -572,7 +575,15 @@ main,
 
 @media (max-width: 600px) {
   .nav {
-    gap: var(--spacing-sm);
+    gap: 1rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+
+  .nav-cta {
+    padding: 0.4rem 1rem;
   }
 
   .cards {
